@@ -3,6 +3,8 @@ const app = express();
 
 const db = require('./models');
 
+app.use(express.json());
+
 // Routers
 const postRouter = require('./routes/Posts');
 app.use("/posts", postRouter);
