@@ -4,7 +4,7 @@ const app = express();
 const db = require('./models');
 
 // Routers
-const postRouter = require("./routes/Posts");
+const postRouter = require('./routes/Posts');
 app.use("/posts", postRouter);
 
 db.sequelize.sync().then(() =>{
