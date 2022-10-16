@@ -1,3 +1,11 @@
+/*
+title
+postText
+
+FK
+UserId
+*/
+
 module.exports = (sequelize, DataTypes) => {
   const Posts = sequelize.define("Posts", {
     title: {
@@ -7,11 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     postText: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    }
   });
 
   Posts.associate = (models) => {
