@@ -1,0 +1,30 @@
+.register_container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(70, 56, 84);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    top: 7vh;
+    text-align: center;
+    color: rgb(71, 63, 63);
+    background-color: rgb(217, 211, 90);
+    height: 60vh;
+    border-radius: 10px;
+    width: 30vw;
+}
+.form>input{
+    background-color: bisque;
+}
+
+.form>select{
+    background-color: bisque;
+}
+
