@@ -1,0 +1,42 @@
+.groupContainer{
+    text-align: center;
+}   
+
+.navOptions{
+    display: flex;
+    gap: 10px;
+    font-size:22px;
+    border-radius:10px;
+}
+
+
+.navOptions:hover{   
+     background-color:gray;
+
+}
+
+    /* background-color:rgb(31,29,29); */
+
+
+.whiteLine{
+    height:1px;
+    width:15vw;
+    background-color:white;
+}
+.navContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.menuIcon{
+    padding-left:34px;
+    transform: scale(1.5);
+}
+
+.homeNav{
+    width:100%;
+}
+

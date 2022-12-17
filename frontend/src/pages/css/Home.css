@@ -1,0 +1,21 @@
+
+.homeContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+}
+
+.leftside{
+    width:15vw;
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+.rightside{
+    width: 85vw;
+    height: 100vh;
+    position: relative;
+    background-color:gray;
+}

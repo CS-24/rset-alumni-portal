@@ -1,0 +1,25 @@
+.loginContainer {
+    display: flex;
+    
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+  }
+  
+  .loginContainer input,
+  button {
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    margin: 10px;
+  }
+  
+  .loginContainer button {
+    background-color: dodgerblue;
+    color: white;
+  }
+  
+  .loginContainer input {
+    border: 2px solid dodgerblue;
+  }

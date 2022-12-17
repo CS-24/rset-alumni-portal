@@ -1,7 +1,7 @@
 .register_container{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(70, 56, 84);
+    background-color: rgb(7, 16, 96);
 }
 
 .form{
@@ -15,16 +15,16 @@
     top: 7vh;
     text-align: center;
     color: rgb(71, 63, 63);
-    background-color: rgb(217, 211, 90);
+    background-color: #61dbfb;
     height: 60vh;
     border-radius: 10px;
     width: 30vw;
 }
 .form>input{
-    background-color: bisque;
+    background-color: white;
 }
 
 .form>select{
-    background-color: bisque;
+    background-color: white;
 }
 
