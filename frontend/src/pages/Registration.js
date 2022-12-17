@@ -1,5 +1,5 @@
 import React from "react";
-import "./Register.css"
+import "./css/Registration.css"
 
 function Register(){
     const today = new Date();
