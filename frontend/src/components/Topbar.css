@@ -1,0 +1,17 @@
+.topbar{
+    background-color: black;
+    height: 10vh;
+    color: white;
+}
+
+.personIcon{
+    border-radius: 50%;
+    position: relative;
+    top:3vh;
+    left: 95vw;
+    transform: scale(1.5);
+}
+
+.personIcon:hover{
+    background-color: gray;
+}

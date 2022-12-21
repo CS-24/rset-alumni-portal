@@ -1,3 +1,11 @@
+
+
+.menuIcon:hover{
+    background-color:gray;
+
+
+}
+
 .groupContainer{
     text-align: center;
 }   
@@ -23,20 +31,51 @@
     width:15vw;
     background-color:white;
 }
+
 .navContainer{
+    background-color: black;
+    margin-top: 4vh;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: 15px;
     font-size: 20px;
     padding-left: 10px;
+    color: white;
 }
 
 .menuIcon{
-    padding-left:34px;
+    transition: transform 0.2s;
+    position: relative;
+    bottom: 8vh;
+    left: 1vw;
+    background-color: black;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     transform: scale(1.5);
+}
+
+.menuIcon:hover{
+    background-color: rgb(78, 78, 166);
+    transform: scale(1.7);
 }
 
 .homeNav{
     width:100%;
 }
 
+.background{
+    height: 100vh;
+    color: white;
+    background-color: black;
+}
+
+.original{
+    width: 0;
+    color: white;
+}
