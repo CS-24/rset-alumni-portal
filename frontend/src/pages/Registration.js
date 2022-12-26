@@ -15,6 +15,10 @@ function Register(){
         return(<option value={branch}>{branch}</option>)});
     return(
         <div className="register_container">
+        <div className="nav">
+        <h2>SIGN UP</h2>
+        <h2>LOGIN</h2>
+        </div>
         <form className="form">
             <label>Email</label>
             <br/>

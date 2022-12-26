@@ -4,6 +4,19 @@
     background-color: rgb(7, 16, 96);
 }
 
+.nav{
+    display: flex;
+    height:10vh;
+    gap: 2vw;
+    color: #61dbfb;
+    background-color: black;
+    cursor: pointer;
+}
+
+.nav>h2:hover{
+    background-color: blueviolet;
+}
+
 .form{
     display: flex;
     flex-direction: column;
