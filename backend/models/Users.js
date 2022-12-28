@@ -3,37 +3,18 @@ email
 mobile
 password
 */
+const mongoose = require("mongoose");
 
-module.exports = (sequelize, DataTypes) => {
-  const Users = sequelize.define("Users", {
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    mobile: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-  });
+const userSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  }
+});
 
-  Users.associate = (models) => {
-    Users.hasMany(models.Posts, {
-      onDelete: "cascade",
-    });
-    Users.hasMany(models.Comments, {
-      onDelete: "cascade",
-    });
-    Users.hasMany(models.Likes, {
-      onDelete: "cascade",
-    })
-    Users.hasOne(models.Profiles, {
-      onDelete: "cascade",
-    });
-  };
-
-  return Users;
-};
+const Users = mongoose.model("Users", userSchema);
+module.exports = Users;

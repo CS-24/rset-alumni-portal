@@ -6,13 +6,15 @@ PostId
 UserId
 */
 
-module.exports = (sequelize, DataTypes) => {
-    const Comments = sequelize.define("Comments", {
-        commentBody: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
-    });
-    return Comments;
-};
+const mongoose = require("mongoose");
+
+const commentSchema = new mongoose.Schema({
+  commentText: {
+    type: String,
+    required: true,
+  },
+});
+
+const Comments = mongoose.model("Comments", commentSchema);
+module.exports = Comments;
 

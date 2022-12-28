@@ -8,31 +8,41 @@ branch
 FK
 UserId
 */
+const mongoose = require("mongoose");
 
-module.exports = (sequelize, DataTypes) => {
-    const Profiles = sequelize.define("Profiles", {
-        Fname: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        Lname: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        bio: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        yearOfGraduation: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        branch: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        }
-    });
-    Profiles.associate = (models) => {
-    };
-    return Profiles;
-};
+const profileSchema = new mongoose.Schema({
+    fname: {
+        type: String,
+        required: true,
+    },
+    lname: {
+        type: String,
+        required: true,
+    },
+    uid: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    branch: {
+        type: String,
+        required: true,
+    },
+    year: {
+        type: Number,
+        required: true,
+    },
+    
+});
+
+const Profiles = mongoose.model("Profiles", profileSchema);
+module.exports = Profiles;
+
+

@@ -1,36 +1,24 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const app = express();
-
 const cors = require('cors');
 
-app.use(express.json());
-app.use(cors());
-
-const db = require('./models');
-
+const profileModel = require("./models/Profiles");
 app.use(express.json());
 
-// Routers
-const postRouter = require('./routes/Posts');
-app.use("/posts", postRouter);
+mongoose.connect("mongodb+srv://admin:YzSKC1sNqGIcywtv@rset-alumni-portal.rwuhx3a.mongodb.net/test", {
+    useNewUrlParser: true,
+});
 
-// const profilesRouter = require('./routes/Profiles');
-// app.use("/profiles", profilesRouter);
+mongoose.connection.once("open", ()=> {
+    console.log("connected");
+})
 
-// const commentsRouter = require('./routes/Comments');
-// app.use("/comments",commentsRouter);
+const profilesRouter = require("./routes/Profiles");
+app.use("/registration",profilesRouter);
 
-const usersRouter = require('./routes/Users');
-app.use("/users",usersRouter);
-
-// const likesRouter = require('./routes/Likes');
-// app.use("/likes",likesRouter);
-
-
-db.sequelize.sync().then(() =>{
-    app.listen(3001, ()=>{
-        console.log("Running");
-    });
+app.listen("3001",()=> {
+    
 });
 
 

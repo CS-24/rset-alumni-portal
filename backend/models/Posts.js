@@ -6,27 +6,22 @@ FK
 UserId
 */
 
-module.exports = (sequelize, DataTypes) => {
-  const Posts = sequelize.define("Posts", {
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    postText: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    }
-  });
+const mongoose = require("mongoose");
 
-  Posts.associate = (models) => {
-    Posts.hasMany(models.Comments, {
-      onDelete: "cascade",
-    });
+const postSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  image: {
+    type: Buffer,
+    required: false,
+  },
+  postText: {
+    type: String,
+    required: true,
+  }
+});
 
-    Posts.hasMany(models.Likes, {
-      onDelete: "cascade",
-    })
-  };
-
-  return Posts;
-};
+const Posts = mongoose.model("Posts", postSchema);
+module.exports = Posts;
