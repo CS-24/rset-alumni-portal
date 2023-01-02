@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const cors = require('cors');
 
+app.use(cors());
 const profileModel = require("./models/Profiles");
 app.use(express.json());
 

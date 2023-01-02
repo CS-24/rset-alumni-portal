@@ -9,17 +9,11 @@ router.route("/").post(async (req,res)=> {
         uid: req.body.uid,
         email: req.body.email,
         password: req.body.password,
-        year: req.body.year,
-        branch: req.body.branch
+        branch: req.body.branch,
+        year: req.body.year
     };
     const newProfile = new profileModel(profile);
-
-    try {
-        await newProfile.save().then(console.log("added"));
-    }
-    catch(err) {
-        console.log(err);
-    }
+    await newProfile.save();
 })
 
 module.exports = router;

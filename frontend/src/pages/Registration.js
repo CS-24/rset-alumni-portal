@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { useNavigate } from "react-router-dom";
 import "./css/Registration.css";
 import axios from "axios";
 
@@ -25,16 +26,21 @@ function Registrations(){
         return(<option value="branch" key={index}>{branch}</option>)
     });
 
+    let navigate = useNavigate();
     const regSubmit = ()=> {
-        axios.post("http://localhost:3001/registration", {
+        let profile = {
             fname: Fname,
             lname: Lname,
             uid: Uid,
             email: Email,
             password: Password,
-            year: Year,
+            year: Number(Year),
             branch: Branch
-        });
+        };
+
+        axios.post("http://localhost:3001/registration",profile ).then((response)=> {
+            console.log(profile);
+        }); 
     }
     return(
         <div className="register_container">
