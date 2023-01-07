@@ -1,5 +1,0 @@
-/*
-FK
-PostId
-UserId
-*/
